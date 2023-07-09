@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import HoseinSedaqat from '../../../assets/HoseinSedaqat.jpg';
+import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg';
 function Sidebar() {
     return ( 
        <>
