@@ -1,9 +1,26 @@
 :root {
   --body-bg: #000000;
   --body-color: #ffffff;
+  --under-list-style: none;
+  --word-break: break-all;
 }
 
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
+  word-break: var(--word-break);
 }
+
+ul {
+  list-style: var(--under-list-style);
+}
+
+.test{ 
+  border-right: 1px solid  #333;
+  border-left: 1px solid  #333;
+  border-bottom: 1px solid  #333;
+  padding: 1rem
+}
+
+/* import */
+@import url('../style/sidebar.css');

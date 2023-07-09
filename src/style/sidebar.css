@@ -1,0 +1,27 @@
+#sidebar-column div {
+    position: sticky;
+    top: 0;
+    padding: 0.7rem 0;
+}
+
+#sidebar-column div ul li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#sidebar-column .tweet-btn {
+    padding: 0.7rem 5rem;
+    border: none;
+    border-radius: 30px;
+}
+
+#sidebar-column div ul li:last-child {
+    margin: 1rem 0;
+}
+
+#sidebar-column div ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
