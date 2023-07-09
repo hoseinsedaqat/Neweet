@@ -1,0 +1,76 @@
+#information-column main {
+    /* position: sticky;
+    top: 0; */
+    padding: 0.5rem 0;
+}
+
+#information-column main .search-bar,
+#information-column main .get-verified,
+#information-column main .trends {
+    margin: 0 0 1rem 0;
+}
+
+/* Search bar */
+#information-column main .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 0 1rem;
+    border-radius: 20px;
+}
+
+#information-column main .search-bar input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    background-color: #222;
+}
+
+#information-column main .search-bar input:focus {
+    outline: none;
+}
+
+/* Verified */
+#information-column main .get-verified {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+#information-column main .get-verified button {
+    border: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+}
+
+/* Trends */
+#information-column main .trends {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+/* Who to follow */
+#information-column main .who-follow {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+#information-column main .who-follow img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#information-column main .who-follow button {
+    border: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+}
+
+/* Footer */
+#information-column main .footer small:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

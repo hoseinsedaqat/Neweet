@@ -23,4 +23,5 @@ ul {
 }
 
 /* import */
+@import url('../style/information.css');
 @import url('../style/sidebar.css');
