@@ -1,5 +1,5 @@
 'use client'
-import Sidebar from './components/sidebar/sidebar'
+import Sidebar from '@/components/sidebar/sidebar'
 import { useEffect } from 'react'
 export default function Home() {
   useEffect(() => {

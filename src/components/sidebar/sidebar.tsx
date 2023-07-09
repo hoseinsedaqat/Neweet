@@ -5,7 +5,7 @@ function Sidebar() {
     return ( 
        <>
         {/* Sidebar Column */}
-        <section className="col-md-3 mx-auto" id="sidebar-column">
+        <section className="col-md-3" id="sidebar-column">
           <div>
             <ul>
               <li>

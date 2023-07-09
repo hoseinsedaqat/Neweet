@@ -1,7 +1,7 @@
 #sidebar-column div {
     position: sticky;
     top: 0;
-    padding: 0.7rem 0;
+    padding: 0.5rem 0;
 }
 
 #sidebar-column div ul li {
