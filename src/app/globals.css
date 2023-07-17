@@ -15,6 +15,10 @@ ul {
   list-style: var(--under-list-style);
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* import */
 @import url('../style/information.css');
 @import url('../style/sidebar.css');
