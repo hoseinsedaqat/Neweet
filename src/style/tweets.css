@@ -13,20 +13,25 @@
     padding: 0.7rem;
 }
 
-#tweets main .add-tweet {
+#tweets main .add-tweet{
     padding: 0.5rem;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     display: flex;
 }
 
-#tweets main .add-tweet img {
+.modal-body .add-tweet {
+    padding: 0.5rem;
+    display: flex;
+}
+
+#tweets main .add-tweet img, .modal-body .add-tweet div:nth-child(1) img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-#tweets main .add-tweet textarea {
+#tweets main .add-tweet textarea, .modal-body .add-tweet textarea {
     resize: none;
     border: none;
     padding: 0.5rem;
@@ -34,22 +39,22 @@
     background: none;
 }
 
-#tweets main .add-tweet textarea:focus {
+#tweets main .add-tweet textarea:focus, .modal-body .add-tweet textarea:focus {
     outline: none;
 }
 
-#tweets main .add-tweet .tweet-features {
+#tweets main .add-tweet .tweet-features, .modal-body .add-tweet .tweet-features {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#tweets main .add-tweet .tweet-features p i {
+#tweets main .add-tweet .tweet-features p i, .modal-body .add-tweet .tweet-features p i {
     margin: 0 1rem 0 0;
     cursor: pointer;
 }
 
-#tweets main .add-tweet .tweet-features button {
+#tweets main .add-tweet .tweet-features button, .modal-body .add-tweet .tweet-features button {
     border: none;
     border-radius: 20px;
     padding: 0.2rem 1rem;

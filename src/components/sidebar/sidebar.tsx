@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg';
+import ModalComponent from '../ui/modal/modalcomponent';
 function Sidebar() {
     return ( 
        <>
@@ -86,7 +87,7 @@ function Sidebar() {
                 </div>
               </li>
               <li>
-                <button className="tweet-btn bg-primary">
+                <button type='button' className="tweet-btn bg-primary" data-bs-toggle="modal" data-bs-target="#tweetModal">
                     Tweet
                 </button>
               </li>
@@ -103,6 +104,7 @@ function Sidebar() {
           </div>
         </section>
         {/* Sidebar Column */}
+        <ModalComponent id={'tweetModal'}/>
        </>
      );
 }
