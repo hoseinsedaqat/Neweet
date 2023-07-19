@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg';
-import ModalComponent from '../ui/modal/modalcomponent';
+import ModalComponent from '../../ui/modal/modalcomponent';
 function Sidebar() {
     return ( 
        <>

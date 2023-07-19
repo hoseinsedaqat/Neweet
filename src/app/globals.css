@@ -21,5 +21,6 @@ ul {
 
 /* import */
 @import url('../style/information.css');
+@import url('../style/explore.css');
 @import url('../style/sidebar.css');
 @import url('../style/tweets.css');
