@@ -1,0 +1,52 @@
+#notifications main {
+    border: 1px solid #222;
+    margin: 0.5rem 0;
+}
+
+#notifications main .notifications-header{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+}
+
+#notifications main .notifications-topics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #222;
+}
+
+#notifications main .notifications-topics p {
+    margin: 0 2rem;
+}
+
+#notifications main .notifications-content div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+}
+
+#notifications main .notifications-content {
+    border-bottom: 1px solid #222;
+}
+
+#notifications main .notifications-content:last-child { 
+    border: none;
+}
+
+#notifications main .notifications-content div:nth-child(1) img { 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#notifications main .notifications-content div:nth-child(2) {
+    padding: 0.7rem;
+}
+
+#notifications main .notifications-content div:nth-child(3) {
+    padding: 0.7rem;
+}

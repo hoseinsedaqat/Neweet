@@ -11,12 +11,12 @@ function Sidebar() {
             <ul>
               <li>
                 <div>
-                  <i className="bi bi-twitter fs-4"></i>
+                  <i className="bi bi-twitter fs-5"></i>
                 </div>
               </li>
               <li>
                 <div>
-                  <i className="bi bi-house-door-fill fs-4"></i>
+                  <i className="bi bi-house-door-fill fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Home
@@ -24,7 +24,7 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-search fs-4"></i>
+                  <i className="bi bi-search fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Explore
@@ -32,7 +32,7 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-bell fs-4"></i>
+                  <i className="bi bi-bell fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Notifications
@@ -40,7 +40,7 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-envelope fs-4"></i>
+                  <i className="bi bi-envelope fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Messages
@@ -48,7 +48,7 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-filter-square fs-4"></i>
+                  <i className="bi bi-filter-square fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Lists
@@ -56,7 +56,7 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-bookmark fs-4"></i>
+                  <i className="bi bi-bookmark fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Bookmarks
@@ -64,7 +64,15 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-patch-check fs-4"></i>
+                  <i className="bi bi-people fs-5"></i>
+                </div> 
+                <div className='ms-3 fs-5'>
+                  Communities
+                </div>
+              </li>
+              <li>
+                <div>
+                  <i className="bi bi-patch-check fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Verified
@@ -72,7 +80,7 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-person fs-4"></i>
+                  <i className="bi bi-person fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   Profile
@@ -80,7 +88,7 @@ function Sidebar() {
               </li>
               <li>
                 <div>
-                  <i className="bi bi-three-dots fs-4"></i>
+                  <i className="bi bi-three-dots fs-5"></i>
                 </div> 
                 <div className='ms-3 fs-5'>
                   More

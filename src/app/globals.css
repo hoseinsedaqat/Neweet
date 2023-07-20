@@ -20,6 +20,7 @@ ul {
 }
 
 /* import */
+@import url('../style/notifications.css');
 @import url('../style/information.css');
 @import url('../style/explore.css');
 @import url('../style/sidebar.css');
