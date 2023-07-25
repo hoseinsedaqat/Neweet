@@ -1,7 +1,10 @@
 'use client'
 import Sidebar from '@/components/layout/sidebar/sidebar'
+import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 function Messages() {
+    const test = useSelector<any, boolean>(state => state.tweet.tweet);
+    console.log(test);
     useEffect(() => {
         require("bootstrap/dist/js/bootstrap")
       },[])
