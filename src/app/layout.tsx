@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Inter } from 'next/font/google'
-import { Providers } from '@/redux/reduxlayout'
+import { Providers } from '@/redux/providers'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: '(Twitter Clone Built by Hosein Sedaqat 2023)',
 }
 
-export default function ReduxLayout({
+export default function RootLayout({
     children,
   }: {
     children: React.ReactNode
