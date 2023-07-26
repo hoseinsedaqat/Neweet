@@ -1,0 +1,67 @@
+#messages-preview {
+    border: 1px solid #222;
+    margin: 0.5rem 0;
+}
+
+#messages-preview .messages-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+#messages-preview .messages-header div {
+    display: flex;
+}
+
+#messages-preview .messages-header div p i {
+    margin: 0 0.5rem;
+}
+
+#messages-preview .messages-search {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 0 1rem;
+    border-radius: 20px;
+    margin: 0.7rem;
+}
+
+#messages-preview .messages-search input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    background-color: #222;
+}
+
+#messages-preview .messages-search input:focus {
+    outline: none;
+}
+
+#messages-preview .messages-user {
+    display: flex;
+    margin: 0.7rem;
+    padding: 0.5rem;
+}
+
+
+#messages-preview .messages-user:hover {
+    background-color: #222;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#messages-preview .messages-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#messages-preview .messages-user div {
+    margin: 0 0.2rem;
+}
+
+#messages-preview .messages-user div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
