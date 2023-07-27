@@ -1,6 +1,9 @@
 #messages-preview {
     border: 1px solid #222;
     margin: 0.5rem 0;
+    height: 96.2vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #messages-preview .messages-header {
