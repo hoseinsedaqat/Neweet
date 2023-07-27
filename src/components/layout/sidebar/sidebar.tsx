@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg';
+import Logo from '@/assets/TwitterLogo.jpeg';
 import ModalComponent from '../../ui/modal/modalcomponent';
 function Sidebar() {
     return ( 
@@ -11,7 +12,8 @@ function Sidebar() {
             <ul>
               <li>
                 <div>
-                  <i className="bi bi-twitter fs-5"></i>
+                  <Image className='TwitterXLogo' alt={'TwitterXLogo'} src={Logo} />
+                  {/* <i className="bi bi-twitter fs-5"></i> */}
                 </div>
               </li>
               <li>
