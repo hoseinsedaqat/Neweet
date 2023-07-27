@@ -22,10 +22,10 @@ function Messages() {
                 </p>
                 <div>
                   <p>
-                    <i className="bi bi-gear"></i>
+                    <i className="bi bi-gear cursor-pointer"></i>
                   </p>
                   <p>
-                    <i className="bi bi-envelope-plus"></i>
+                    <i className="bi bi-envelope-plus cursor-pointer"></i>
                   </p>
                 </div>
               </div>
@@ -156,8 +156,42 @@ function Messages() {
                 </div>
               </div>
             </section>
-            <section className="col-md-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque ad totam nulla eius corporis adipisci, officiis tenetur, repudiandae nesciunt, sint itaque earum consectetur ullam maiores voluptas. Rerum fugit soluta aspernatur ducimus harum quia numquam reiciendis in qui? Reprehenderit autem facilis dolorem nisi. Ut, tenetur magnam! Soluta magni eius reprehenderit id tempore error illo ut porro? Corporis recusandae minima, id dicta veniam saepe sapiente! Consequuntur similique eveniet dicta dignissimos optio fugit consequatur, deserunt, ipsum eum amet reiciendis voluptatibus vitae aperiam sit nobis, veritatis illum ab omnis aspernatur id cupiditate debitis? Corporis, voluptatum. Temporibus cumque dolorem quibusdam cum ipsum ratione dolores ad!
+            <section className="col-md-5" id='messages-direct'>
+              <div className="messages-direct-header">
+                <div>
+                  <Image src={HoseinSedaqat} alt='User-Profile-Img'/>
+                  <small>HoseinSedaqat</small>
+                </div>
+                <div>
+                  <i className="bi bi-info-circle cursor-pointer"></i>
+                </div>
+              </div>
+              <div className="messages-direct-texts">
+                  <p className="bg-primary text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi consequuntur enim commodi possimus eveniet sit, saepe nostrum at fugiat!
+                  </p>
+                  <p className="bg-secondary text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi consequuntur enim commodi possimus eveniet sit, saepe nostrum at fugiat!
+                  </p> 
+                  <p className="bg-primary text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi consequuntur enim commodi possimus eveniet sit, saepe nostrum at fugiat!
+                  </p>
+                  <p className="bg-secondary text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi consequuntur enim commodi possimus eveniet sit, saepe nostrum at fugiat!
+                  </p> 
+                  <p className="bg-primary text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi consequuntur enim commodi possimus eveniet sit, saepe nostrum at fugiat!
+                  </p>
+                  <p className="bg-secondary text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi consequuntur enim commodi possimus eveniet sit, saepe nostrum at fugiat!
+                  </p> 
+              </div>
+              <div className="messages-direct-add">
+                <input type="text" placeholder='Start a new messgae'/>
+                <div>
+                  <i className="bi bi-send-fill cursor-pointer"></i>
+                </div>
+              </div>
             </section>
            </div>
         </div> 

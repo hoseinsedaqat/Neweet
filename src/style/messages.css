@@ -65,3 +65,72 @@
     display: flex;
     flex-direction: column;
 }
+
+#messages-direct {
+    border: 1px solid #222;
+    margin: 0.5rem 0;
+    height: 96.2vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#messages-direct .messages-direct-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+#messages-direct .messages-direct-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0;
+}
+
+#messages-direct .messages-direct-texts {
+    margin: 0 0 0 0.5rem;
+    width: 100% !important;
+}
+
+#messages-direct .messages-direct-texts p:nth-child(odd) {
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 50%;
+    font-size: 14px;
+}
+
+#messages-direct .messages-direct-texts p:nth-child(even) {
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 50%;
+    font-size: 14px;
+    margin: 1rem 0 1rem auto;
+}
+
+#messages-direct .messages-direct-add {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 0 1rem;
+    border-radius: 20px;
+    /* margin: 0.7rem; */
+}
+
+#messages-direct .messages-direct-add input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    background-color: #222;
+}
+
+#messages-direct .messages-direct-add input:focus {
+    outline: none;
+}
+
+#messages-direct .messages-direct-add div {
+    transform: rotate(44deg);
+}
