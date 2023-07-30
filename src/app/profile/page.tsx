@@ -1,9 +1,8 @@
 'use client'
 import Sidebar from '@/components/layout/sidebar/sidebar'
 import Information from '@/components/layout/information/information'
-import BookmarksLanding from '@/components/bookmarks/bookmarkslanding'
 import { useEffect } from 'react'
-function Bookmarks() {
+function Profile() {
     useEffect(() => {
         require("bootstrap/dist/js/bootstrap")
       },[])
@@ -12,7 +11,9 @@ function Bookmarks() {
             <div className="container">
                 <div className="row">
                     <Sidebar />
-                    <BookmarksLanding /> 
+                    <section className="col-md-5" id='profile'>
+                        <p>This Profile Page</p>
+                    </section>
                     <Information />
                 </div>
             </div>
@@ -20,4 +21,4 @@ function Bookmarks() {
      );
 }
 
-export default Bookmarks;
+export default Profile;

@@ -24,6 +24,7 @@ ul {
 @import url('../style/information.css');
 @import url('../style/bookmarks.css');
 @import url('../style/messages.css');
+@import url('../style/profile.css');
 @import url('../style/explore.css');
 @import url('../style/sidebar.css');
 @import url('../style/tweets.css');
