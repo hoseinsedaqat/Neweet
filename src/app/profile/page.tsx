@@ -4,6 +4,7 @@ import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg'
 import ModernFamily from '@/assets/ModernFamily.jpg'
 import Sidebar from '@/components/layout/sidebar/sidebar'
 import Information from '@/components/layout/information/information'
+import ModalEditProfile from '@/components/ui/modal/modaleditprofile'
 import { useEffect } from 'react'
 function Profile() {
     useEffect(() => {
@@ -24,7 +25,7 @@ function Profile() {
                                 <Image src={HoseinSedaqat} alt='User-Profile-Img'/>
                             </div>
                             <div>
-                                <button>Edit profile</button>
+                                <button data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit profile</button>
                             </div>
                         </div>
                         <div className="profile-information">
@@ -145,6 +146,7 @@ function Profile() {
                     <Information />
                 </div>
             </div>
+            <ModalEditProfile id='editProfileModal'/>
         </>
      );
 }
