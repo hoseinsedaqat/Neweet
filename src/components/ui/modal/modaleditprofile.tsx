@@ -27,7 +27,7 @@ function ModalEditProfile({id}: ComponentTypes) {
                             <div className='modal-edit-profile-img'>
                                 {/* User profile image */}
                                 <Image src={HoseinSedaqat} alt='User-Profile-Img'/>
-                                <button className='btn bg-white text-dark my-3'>Upload Image</button>
+                                <button className='btn btn-outline-light my-3'>Upload Image</button>
                             </div>
                             <div className='w-100'>
                                 <div className="form-group">
