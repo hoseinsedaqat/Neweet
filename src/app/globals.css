@@ -19,6 +19,21 @@ ul {
   cursor: pointer;
 }
 
+/* Scroll Bar Design for Chrome */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 10px
+}
+
 /* import */
 @import url('../style/notifications.css');
 @import url('../style/information.css');
