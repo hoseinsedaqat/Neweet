@@ -50,3 +50,65 @@
 #notifications main .notifications-content div:nth-child(3) {
     padding: 0.7rem;
 }
+
+#notifications main:nth-child(1) {
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    #notifications {
+        margin: auto;
+        width: 100%;
+        display: flex;
+    }
+
+    #notifications main:nth-child(1) {
+        display: block;
+        width: 20%;
+        border: none;
+    }
+
+    #notifications main:nth-child(1) div {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem 0;
+    }
+    
+    #notifications main:nth-child(1) div ul li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #notifications main:nth-child(1) .tweet-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        border-radius: 30px;
+    }
+    
+    #notifications main:nth-child(1) div ul li:last-child {
+        margin: 1rem 0;
+    }
+    
+    #notifications main:nth-child(1) div ul li img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    #notifications main:nth-child(2) {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    #notifications main:nth-child(1){
+        display: none;
+    }
+    #notifications main:nth-child(2) {
+        width: 100%;
+    }
+}

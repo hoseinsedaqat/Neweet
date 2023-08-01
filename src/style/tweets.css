@@ -1,4 +1,4 @@
-#tweets main{
+#tweets main {
     border-top: 1px solid #333;
     border-right: 1px solid #333;
     border-left: 1px solid #333;
@@ -13,7 +13,7 @@
     padding: 0.7rem;
 }
 
-#tweets main .add-tweet{
+#tweets main .add-tweet {
     padding: 0.5rem;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
@@ -75,14 +75,76 @@
     display: flex;
 }
 
-#tweets main .tweet-message .tp img{
+#tweets main .tweet-message .tp img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
 #tweets main .tweet-message .tp-data img {
-   width: 100%;
-   height: 100%;
-   border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#tweets main:nth-child(1) {
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    #tweets {
+        margin: auto;
+        width: 100%;
+        display: flex;
+    }
+
+    #tweets main:nth-child(1) {
+        display: block;
+        width: 20%;
+        border: none;
+    }
+
+    #tweets main:nth-child(1) div {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem 0;
+    }
+    
+    #tweets main:nth-child(1) div ul li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #tweets main:nth-child(1) .tweet-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        border-radius: 30px;
+    }
+    
+    #tweets main:nth-child(1) div ul li:last-child {
+        margin: 1rem 0;
+    }
+    
+    #tweets main:nth-child(1) div ul li img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    #tweets main:nth-child(2) {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    #tweets main:nth-child(1){
+        display: none;
+    }
+    #tweets main:nth-child(2) {
+        width: 100%;
+    }
 }

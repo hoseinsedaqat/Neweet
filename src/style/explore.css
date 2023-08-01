@@ -53,3 +53,65 @@
     height: 100%;
     border-radius: 10px;
 }
+
+#explore main:nth-child(1) {
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    #explore {
+        margin: auto;
+        width: 100%;
+        display: flex;
+    }
+
+    #explore main:nth-child(1) {
+        display: block;
+        width: 20%;
+        border: none;
+    }
+
+    #explore main:nth-child(1) div {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem 0;
+    }
+    
+    #explore main:nth-child(1) div ul li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #explore main:nth-child(1) .tweet-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        border-radius: 30px;
+    }
+    
+    #explore main:nth-child(1) div ul li:last-child {
+        margin: 1rem 0;
+    }
+    
+    #explore main:nth-child(1) div ul li img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    #explore main:nth-child(2) {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    #explore main:nth-child(1){
+        display: none;
+    }
+    #explore main:nth-child(2) {
+        width: 100%;
+    }
+}
