@@ -137,3 +137,68 @@
 #messages-direct .messages-direct-add div {
     transform: rotate(44deg);
 }
+
+.messages-manage-sidebar {
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    #messages-manage-views {
+        margin: auto;
+        width: 100%;
+        display: flex;
+    }
+
+    #messages-direct {
+        display: none;
+    }
+
+    #messages-preview {
+        width: 80%;
+    }
+
+    .messages-manage-sidebar div {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem 0;
+    }
+
+    .messages-manage-sidebar div ul li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .messages-manage-sidebar .tweet-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        border-radius: 30px;
+    }
+
+    .messages-manage-sidebar div ul li:last-child {
+        margin: 1rem 0;
+    }
+
+    .messages-manage-sidebar div ul li img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .messages-manage-sidebar {
+        display: block;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .messages-manage-sidebar {
+        display: none;
+    }
+
+    #messages-preview {
+        width: 100%;
+    }
+}

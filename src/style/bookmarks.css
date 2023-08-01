@@ -1,4 +1,4 @@
-#bookmarks {
+#bookmarks main{
     border: 1px solid #222;
     margin: 0.5rem 0;
 }
@@ -19,4 +19,66 @@
 #bookmarks .bookmarks-save img {
     width: 100%;
     height: 100%;
+}
+
+#bookmarks main:nth-child(1) {
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    #bookmarks {
+        margin: auto;
+        width: 100%;
+        display: flex;
+    }
+
+    #bookmarks main:nth-child(1) {
+        display: block;
+        width: 20%;
+        border: none;
+    }
+
+    #bookmarks main:nth-child(1) div {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem 0;
+    }
+    
+    #bookmarks main:nth-child(1) div ul li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #bookmarks main:nth-child(1) .tweet-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        border-radius: 30px;
+    }
+    
+    #bookmarks main:nth-child(1) div ul li:last-child {
+        margin: 1rem 0;
+    }
+    
+    #bookmarks main:nth-child(1) div ul li img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    #bookmarks main:nth-child(2) {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    #bookmarks main:nth-child(1){
+        display: none;
+    }
+    #bookmarks main:nth-child(2) {
+        width: 100%;
+    }
 }
