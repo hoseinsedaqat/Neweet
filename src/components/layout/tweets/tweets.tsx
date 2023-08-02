@@ -6,7 +6,7 @@ function Tweets() {
     return ( 
         <>
         <section className="col-md-5" id='tweets'>
-          <SidebarMd />
+          <SidebarMd id=''/>
           <main>
             <div className="header-filter w-100">
               <p>For you</p>

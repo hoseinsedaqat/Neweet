@@ -17,7 +17,7 @@ function Profile() {
                 <div className="row">
                     <Sidebar />
                     <section className="col-md-5" id='profile'>
-                        <SidebarMd />
+                        <SidebarMd id=''/>
                         <main>
                         <div className="profile-header">
                             <h5>Hosein Sedaqat</h5>

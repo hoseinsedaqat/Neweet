@@ -3,10 +3,16 @@ import Image from 'next/image'
 import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg'
 import Logo from '@/assets/TwitterLogo.jpeg'
 import Link from 'next/link'
-function SidebarMd() {
+import PropTypes, { InferProps } from "prop-types";
+const ComponentPropTypes = {
+    id: PropTypes.string.isRequired,
+};
+type ComponentTypes = InferProps<typeof ComponentPropTypes>;
+
+function SidebarMd({id}: ComponentTypes) {
     return ( 
         <>
-            <main>
+            <main className={id}>
                 <div>
                     <ul>
                         <li>

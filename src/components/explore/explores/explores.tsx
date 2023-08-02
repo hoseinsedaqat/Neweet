@@ -6,7 +6,7 @@ function Explores() {
     return ( 
         <>
             <section className="col-md-5" id="explore">
-                <SidebarMd />
+                <SidebarMd id=''/>
                 <main>
                     <div className="explore-header">
                         <div>

@@ -5,7 +5,7 @@ function NotifyLanding() {
     return ( 
         <>
             <section className="col-md-5" id="notifications">
-                <SidebarMd />
+                <SidebarMd id=''/>
                 <main>
                     <div className="notifications-header">
                         <h5>Notifications</h5>

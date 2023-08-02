@@ -5,7 +5,7 @@ function BookmarksLanding() {
     return ( 
         <>
          <section className="col-md-5" id="bookmarks">
-            <SidebarMd />
+            <SidebarMd id=''/>
             <main>
                 <div className="bookmarks-header d-flex flex-column p-2">
                     <h5>Bookmarks</h5>

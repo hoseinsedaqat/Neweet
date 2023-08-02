@@ -1,10 +1,10 @@
 'use client'
 import Sidebar from '@/components/layout/sidebar/sidebar'
 import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg'
-import Logo from '@/assets/TwitterLogo.jpeg'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Image from 'next/image'
+import SidebarMd from '@/components/layout/sidebar/sidebarmd'
 function Messages() {
     const test = useSelector<any, boolean>(state => state.tweet.tweet);
     console.log(test);
@@ -16,78 +16,7 @@ function Messages() {
         <div className="container">
           <div className="row" id='messages-manage-views'>
             <Sidebar />
-            <main className='messages-manage-sidebar'>
-                <div>
-                    <ul>
-                        <li>
-                          <div>
-                            <Image className='TwitterXLogo' alt={'TwitterXLogo'} src={Logo} />
-                                {/* <i className="bi bi-twitter fs-5"></i> */}
-                          </div>
-                        </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-house-door-fill fs-5"></i>
-                              </div>
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-search fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-bell fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-envelope fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-filter-square fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-bookmark fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-people fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-patch-check fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-person fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <div>
-                                <i className="bi bi-three-dots fs-5"></i>
-                              </div> 
-                            </li>
-                            <li>
-                              <button type='button' className="tweet-btn bg-primary" data-bs-toggle="modal" data-bs-target="#tweetModal">
-                                <i className="bi bi-pencil-square"></i>
-                              </button>
-                            </li>
-                            <li>
-                              <p>
-                                  <Image src={HoseinSedaqat} alt='User-Profile-Img'/>
-                              </p>
-                            </li>
-                          </ul>
-                    </div>
-                </main>
+            <SidebarMd id='messages-manage-sidebar'/>
             <section className="col-md-4" id='messages-preview'>
               <div className="messages-header">
                 <p className='fs-5'>
