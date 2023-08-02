@@ -51,8 +51,8 @@
     }
     
     #bookmarks main:nth-child(1) .tweet-btn {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         border: none;
         border-radius: 30px;
@@ -63,8 +63,8 @@
     }
     
     #bookmarks main:nth-child(1) div ul li img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
     }
 
