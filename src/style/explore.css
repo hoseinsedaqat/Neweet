@@ -77,10 +77,12 @@
         padding: 0.5rem 0;
     }
     
-    #explore main:nth-child(1) div ul li {
+    #explore main:nth-child(1) div ul a {
         display: flex;
         align-items: center;
         cursor: pointer;
+        color: #fff;
+        text-decoration: none;
     }
     
     #explore main:nth-child(1) .tweet-btn {

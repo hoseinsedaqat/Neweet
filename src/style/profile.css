@@ -141,10 +141,12 @@
         padding: 0.5rem 0;
     }
     
-    #profile main:nth-child(1) div ul li {
+    #profile main:nth-child(1) div ul a {
         display: flex;
         align-items: center;
         cursor: pointer;
+        color: #fff;
+        text-decoration: none;
     }
     
     #profile main:nth-child(1) .tweet-btn {

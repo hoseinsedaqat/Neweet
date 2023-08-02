@@ -110,10 +110,12 @@
         padding: 0.5rem 0;
     }
     
-    #tweets main:nth-child(1) div ul li {
+    #tweets main:nth-child(1) div ul a {
         display: flex;
         align-items: center;
         cursor: pointer;
+        color: #fff;
+        text-decoration: none;
     }
     
     #tweets main:nth-child(1) .tweet-btn {

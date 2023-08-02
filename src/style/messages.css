@@ -163,10 +163,12 @@
         padding: 0.5rem 0;
     }
 
-    .messages-manage-sidebar div ul li {
+    .messages-manage-sidebar div ul a {
         display: flex;
         align-items: center;
         cursor: pointer;
+        color: #fff;
+        text-decoration: none;
     }
 
     .messages-manage-sidebar .tweet-btn {

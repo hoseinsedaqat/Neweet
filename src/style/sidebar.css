@@ -4,10 +4,12 @@
     padding: 0.5rem 0;
 }
 
-#sidebar-column div ul li {
+#sidebar-column div ul a {
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
 }
 
 #sidebar-column .tweet-btn {
@@ -18,6 +20,7 @@
 
 #sidebar-column div ul li:last-child {
     margin: 1rem 0;
+    display: flex;
 }
 
 #sidebar-column div ul li img {
