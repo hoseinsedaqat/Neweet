@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Inter } from 'next/font/google'
 import { Providers } from '@/redux/providers'
+import OffCanvas from '@/components/ui/offcanvas/offcanvas'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,6 +23,7 @@ export default function RootLayout({
       <html lang="en" data-bs-theme="dark">
         <body className={inter.className}>
           <Providers>
+            <OffCanvas />
             {children}
           </Providers>
         </body>

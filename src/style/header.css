@@ -1,0 +1,52 @@
+#header-small {
+    display: none;
+    width: 100%;
+}
+
+#header-small img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+#header-small img:first-child {
+    margin: 0.5rem;
+}
+
+#header-small div ul a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5rem -0.6rem;
+}
+
+#header-small .tweet-btn {
+    padding: 0.7rem 5rem;
+    border: none;
+    border-radius: 30px;
+    margin: 0 -0.6rem;
+}
+
+#header-small div ul li:last-child {
+    display: flex;
+    margin: 0.5rem -0.6rem;
+}
+
+#header-small div ul li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:768px) {
+    #header-small {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: 0.5rem; */
+    }
+}

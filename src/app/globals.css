@@ -3,12 +3,14 @@
   --body-color: #ffffff;
   --under-list-style: none;
   --word-break: break-all;
+  --overflow-hidden: hidden;
 }
 
 body {
   background-color: var(--body-bg) !important;
   color: var(--body-color) !important;
   word-break: var(--word-break) !important;
+  overflow-x: var(--overflow-hidden) !important;
 }
 
 ul {
@@ -17,6 +19,11 @@ ul {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.bg-x {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* Scroll Bar Design for Chrome */
@@ -43,3 +50,4 @@ ul {
 @import url('../style/explore.css');
 @import url('../style/sidebar.css');
 @import url('../style/tweets.css');
+@import url('../style/header.css');
