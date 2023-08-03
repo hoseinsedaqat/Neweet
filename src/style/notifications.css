@@ -113,4 +113,8 @@
     #notifications main:nth-child(2) {
         width: 100%;
     }
+
+    #notifications main .notifications-topics {
+        font-size: 12px;
+    }
 }

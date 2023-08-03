@@ -67,16 +67,16 @@ function Profile() {
                             <div className='tp'>
                                 <Image src={HoseinSedaqat} alt='User-Profile-Img'/>
                                 <div className="tp-data">
-                                <small className='mx-2'>Hosein Sedaqat</small>
-                                <small className='text-muted'>@HoseinSedaqat</small>
-                                <small className='ms-1 text-muted'>.14h</small>
+                                <small className='mx-2 tweet-post-title'>Hosein Sedaqat</small>
+                                <small className='text-muted tweet-post-title'>@HoseinSedaqat</small>
+                                <small className='ms-1 text-muted tweet-post-title'>.14h</small>
                                 <div className='px-2 py-2'>
                                     <small>this is awesome</small>
                                 </div>
                                 <div>
                                     <Image src={ModernFamily} alt='User-Tweet-Img' className='my-2'/>
                                 </div>
-                                <div className='d-flex'>
+                                <div className='d-flex tweet-post-sm'>
                                     <p className='text-muted me-3'>
                                     <i className="bi bi-chat"></i>
                                     <small className='ms-2'>234</small>
@@ -107,16 +107,16 @@ function Profile() {
                             <div className='tp'>
                                 <Image src={HoseinSedaqat} alt='User-Profile-Img'/>
                                 <div className="tp-data">
-                                <small className='mx-2'>Hosein Sedaqat</small>
-                                <small className='text-muted'>@HoseinSedaqat</small>
-                                <small className='ms-1 text-muted'>.14h</small>
+                                <small className='mx-2 tweet-post-title'>Hosein Sedaqat</small>
+                                <small className='text-muted tweet-post-title'>@HoseinSedaqat</small>
+                                <small className='ms-1 text-muted tweet-post-title'>.14h</small>
                                 <div className='px-2 py-2'>
                                     <small>this is awesome</small>
                                 </div>
                                 <div>
                                     <Image src={ModernFamily} alt='User-Tweet-Img' className='my-2'/>
                                 </div>
-                                <div className='d-flex'>
+                                <div className='d-flex tweet-post-sm'>
                                     <p className='text-muted me-3'>
                                     <i className="bi bi-chat"></i>
                                     <small className='ms-2'>234</small>

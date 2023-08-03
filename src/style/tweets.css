@@ -149,4 +149,16 @@
     #tweets main:nth-child(2) {
         width: 100%;
     }
+
+    .tweet-post-sm p{
+        font-size: 7px !important;
+    }
+
+    .tweet-post-title {
+        font-size: 10px !important;
+    }
+
+    .modal-body .add-tweet .tweet-features button {
+        padding: 0.2rem 0.6rem;
+    }
 }

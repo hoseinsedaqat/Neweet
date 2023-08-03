@@ -180,4 +180,8 @@
     #profile main:nth-child(2) {
         width: 100%;
     }
+
+    #profile .profile-information div:nth-child(4) small {
+        font-size: 11px;
+    }
 }
