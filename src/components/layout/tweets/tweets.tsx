@@ -74,9 +74,6 @@ function Tweets() {
                       <i className="bi bi-bar-chart"></i>
                       <small className='ms-2'>327k</small>
                     </p>
-                    <p className='text-muted mx-3'>
-                      <i className="bi bi-download"></i>
-                    </p>
                   </div>
                 </div>
               </div>
@@ -114,9 +111,6 @@ function Tweets() {
                       <i className="bi bi-bar-chart"></i>
                       <small className='ms-2'>327k</small>
                     </p>
-                    <p className='text-muted mx-3'>
-                      <i className="bi bi-download"></i>
-                    </p>
                   </div>
                 </div>
               </div>
@@ -153,9 +147,6 @@ function Tweets() {
                     <p className='text-muted mx-3'>
                       <i className="bi bi-bar-chart"></i>
                       <small className='ms-2'>327k</small>
-                    </p>
-                    <p className='text-muted mx-3'>
-                      <i className="bi bi-download"></i>
                     </p>
                   </div>
                 </div>
