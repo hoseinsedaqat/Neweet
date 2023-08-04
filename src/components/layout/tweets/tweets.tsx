@@ -37,7 +37,7 @@ function Tweets() {
                    <i className="bi bi-calendar4-event text-primary"></i>
                    <i className="bi bi-geo-alt-fill text-primary"></i>
                   </p>
-                  <button className='bg-primary'>Tweet</button>
+                  <button className='bg-primary'>Post</button>
                 </div>
               </div>
             </div>

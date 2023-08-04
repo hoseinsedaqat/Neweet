@@ -27,7 +27,10 @@ function ModalEditProfile({id}: ComponentTypes) {
                             <div className='modal-edit-profile-img'>
                                 {/* User profile image */}
                                 <Image src={HoseinSedaqat} alt='User-Profile-Img'/>
-                                <button className='btn btn-outline-light my-3'>Upload Image</button>
+                                <label htmlFor="Profile-Image" className='my-3'>
+                                    <i className="bi bi-upload text-white cursor-pointer fs-4"></i>
+                                </label>
+                                <input type="file" name='Profile-Image' id='Profile-Image' className='d-none'/>
                             </div>
                             <div className='w-100'>
                                 <div className="form-group">

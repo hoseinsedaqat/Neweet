@@ -112,6 +112,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .modal-edit-profile img {
     width: 100px;
     height: 100px;
@@ -140,7 +141,7 @@
         top: 0;
         padding: 0.5rem 0;
     }
-    
+
     #profile main:nth-child(1) div ul a {
         display: flex;
         align-items: center;
@@ -148,7 +149,7 @@
         color: #fff;
         text-decoration: none;
     }
-    
+
     #profile main:nth-child(1) .tweet-btn {
         width: 40px;
         height: 40px;
@@ -156,11 +157,11 @@
         border: none;
         border-radius: 30px;
     }
-    
+
     #profile main:nth-child(1) div ul li:last-child {
         margin: 1rem 0;
     }
-    
+
     #profile main:nth-child(1) div ul li img {
         width: 40px;
         height: 40px;
@@ -173,10 +174,11 @@
 
 }
 
-@media screen and (max-width:768px){
-    #profile main:nth-child(1){
+@media screen and (max-width:768px) {
+    #profile main:nth-child(1) {
         display: none;
     }
+
     #profile main:nth-child(2) {
         width: 100%;
     }

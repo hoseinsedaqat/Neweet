@@ -15,8 +15,8 @@ function NotifyLanding() {
                     </div>
                     <div className="notifications-topics">
                         <p>All</p>
-                        <p>Verified</p>
-                        <p>Mentions</p>
+                        <p className='text-muted'>Verified</p>
+                        <p className='text-muted'>Mentions</p>
                     </div>
                     <div className="notifications-content">
                         <div>

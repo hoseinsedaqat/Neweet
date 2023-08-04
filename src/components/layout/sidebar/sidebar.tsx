@@ -121,7 +121,7 @@ function Sidebar() {
               </li>
               <li>
                 <button type='button' className="tweet-btn bg-primary" data-bs-toggle="modal" data-bs-target="#tweetModal">
-                    Tweet
+                    Post
                 </button>
               </li>
               <li>

@@ -53,7 +53,7 @@ function ModalComponent({id}: ComponentTypes) {
                                     <i className="bi bi-geo-alt-fill text-primary"></i>
                                     </p>
                                     {/* Tweet button */}
-                                    <button className='bg-primary'>Tweet</button>
+                                    <button className='bg-primary'>Post</button>
                                 </div>
                             </div>
                         </div>
