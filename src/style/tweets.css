@@ -34,7 +34,7 @@
 .tweet-preview-img {
     width: 100px !important;
     height: 100px !important;
-    border-radius: 0 !important;
+    border-radius: 10px !important;
 }
 
 #tweets main .add-tweet textarea, .modal-body .add-tweet textarea {
