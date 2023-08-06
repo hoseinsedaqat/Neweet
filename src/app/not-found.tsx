@@ -19,7 +19,7 @@ function NotFound() {
                                 {`Hmm...this page doesn't exist. Try searchingfor something else.`} 
                             </p>
                             <Link href={'/'} className="bg-primary">
-                                Search
+                                Back to Home
                             </Link>
                         </main>
                     </section>

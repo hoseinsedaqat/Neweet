@@ -97,7 +97,7 @@ function Profile() {
                                 </div>
                             </div>
                             <div className="tp-dots">
-                                <p>...</p>
+                                <p className='cursor-pointer'>...</p>
                             </div>
                         </div>
                         <div className="tweet-message">
@@ -134,7 +134,7 @@ function Profile() {
                                 </div>
                             </div>
                             <div className="tp-dots">
-                                <p>...</p>
+                                <p className='cursor-pointer'>...</p>
                             </div>
                         </div>
                         </main>

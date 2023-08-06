@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import HoseinSedaqat from '@/assets/HoseinSedaqat.jpg';
+import ColtSteele from '@/assets/ColtSteele.png'
+import ScottMoss from '@/assets/ScottMoss.jpg'
+import DanAbramov from '@/assets/DanAbramov.jpg'
 function Information() {
     return ( 
         <>
@@ -28,7 +30,7 @@ function Information() {
                   <span className="d-block">Nextjs</span>
                   <small className="d-block text-muted">457.9k tweets</small>
                 </p>
-                <p>...</p>
+                <p className='cursor-pointer'>...</p>
               </div>
               <div className='d-flex align-items-center justify-content-between'>
                 <p>
@@ -36,34 +38,34 @@ function Information() {
                   <span className="d-block">Nuxtjs</span>
                   <small className="d-block text-muted">331.9k tweets</small>
                 </p>
-                <p>...</p>
+                <p className='cursor-pointer'>...</p>
               </div>
               <div className='d-flex align-items-center justify-content-between'>
                 <p>
                   <small className="d-block text-muted">Trending in England</small>
                   <span className="d-block">Diffrent</span>
-                  <small className="d-block text-muted">331.9k tweets</small>
+                  <small className="d-block text-muted">254.1k tweets</small>
                 </p>
-                <p>...</p>
+                <p className='cursor-pointer'>...</p>
               </div>
               <div className='d-flex align-items-center justify-content-between'>
                 <p>
                   <small className="d-block text-muted">Trending in England</small>
                   <span className="d-block">Music</span>
-                  <small className="d-block text-muted">331.9k tweets</small>
+                  <small className="d-block text-muted">127.8k tweets</small>
                 </p>
-                <p>...</p>
+                <p className='cursor-pointer'>...</p>
               </div>
               <div className='d-flex align-items-center justify-content-between'>
                 <p>
                   <small className="d-block text-muted">Trending in England</small>
                   <span className="d-block">Books</span>
-                  <small className="d-block text-muted">331.9k tweets</small>
+                  <small className="d-block text-muted">78.6k tweets</small>
                 </p>
-                <p>...</p>
+                <p className='cursor-pointer'>...</p>
               </div>
               <div className='d-flex align-items-center justify-content-between'>
-                <p className='text-primary'>show more</p>
+                <p className='text-primary cursor-pointer'>show more</p>
               </div>
             </div>
             {/* Who to follow */}
@@ -72,11 +74,11 @@ function Information() {
               <div className='d-flex align-items-center justify-content-between my-3'>
                 <div className='d-flex align-items-center'>
                   <div>
-                    <Image src={HoseinSedaqat} alt='Recommended-Profile-Img'/>
+                    <Image src={ColtSteele} alt='Recommended-Profile-Img'/>
                   </div>
                   <div className='ms-2'>
-                    <small className="d-block">Hosein Sedaqat</small>
-                    <small className="d-block text-muted">@HoseinSedaqat</small>
+                    <small className="d-block">Colt Steele</small>
+                    <small className="d-block text-muted">@ColtSteele</small>
                   </div>
                 </div>
                 <p>
@@ -90,11 +92,11 @@ function Information() {
               <div className='d-flex align-items-center justify-content-between my-3'>
                 <div className='d-flex align-items-center'>
                   <div>
-                    <Image src={HoseinSedaqat} alt='Recommended-Profile-Img'/>
+                    <Image src={ScottMoss} alt='Recommended-Profile-Img'/>
                   </div>
                   <div className='ms-2'>
-                    <small className="d-block">Hosein Sedaqat</small>
-                    <small className="d-block text-muted">@HoseinSedaqat</small>
+                    <small className="d-block">Scott Moss</small>
+                    <small className="d-block text-muted">@ScottMoss</small>
                   </div>
                 </div>
                 <p>
@@ -108,11 +110,11 @@ function Information() {
               <div className='d-flex align-items-center justify-content-between my-3'>
                 <div className='d-flex align-items-center'>
                   <div>
-                    <Image src={HoseinSedaqat} alt='Recommended-Profile-Img'/>
+                    <Image src={DanAbramov} alt='Recommended-Profile-Img'/>
                   </div>
                   <div className='ms-2'>
-                    <small className="d-block">Hosein Sedaqat</small>
-                    <small className="d-block text-muted">@HoseinSedaqat</small>
+                    <small className="d-block">Dan Abramov</small>
+                    <small className="d-block text-muted">@DanAbramov</small>
                   </div>
                 </div>
                 <p>
@@ -124,7 +126,7 @@ function Information() {
                 </p>
               </div>
               <div className='d-flex align-items-center justify-content-between'>
-                <p className='text-primary'>show more</p>
+                <p className='text-primary cursor-pointer'>show more</p>
               </div>
             </div>
             {/* Footer */}

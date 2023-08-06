@@ -23,7 +23,7 @@ function Explores() {
                                 <span className="d-block">Nextjs</span>
                                 <small className="d-block text-muted">457.9k tweets</small>
                             </p>
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                         </div>
                         <div className='d-flex align-items-center justify-content-between'>
                             <p>
@@ -31,7 +31,7 @@ function Explores() {
                                 <span className="d-block">Nuxtjs</span>
                                 <small className="d-block text-muted">331.9k tweets</small>
                             </p>
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                     </div>
                     <div className='d-flex align-items-center justify-content-between'>
                             <p>
@@ -39,7 +39,7 @@ function Explores() {
                                 <span className="d-block">Diffrent</span>
                                 <small className="d-block text-muted">331.9k tweets</small>
                             </p>
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                     </div>
                     <div className='d-flex align-items-center justify-content-between'>
                             <p>
@@ -47,7 +47,7 @@ function Explores() {
                                 <span className="d-block">Music</span>
                                 <small className="d-block text-muted">331.9k tweets</small>
                             </p>
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                     </div>
                     <div className='d-flex align-items-center justify-content-between'>
                             <p>
@@ -55,10 +55,10 @@ function Explores() {
                                 <span className="d-block">Books</span>
                                 <small className="d-block text-muted">331.9k tweets</small>
                             </p>
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                     </div>
                     <div className='d-flex align-items-center justify-content-between'>
-                        <p className='text-primary'>show more</p>
+                        <p className='text-primary cursor-pointer'>show more</p>
                     </div>
                     </div>
                     {/* Trending Post */}
@@ -96,7 +96,7 @@ function Explores() {
                             </div>
                         </div>
                         <div className="tp-dots">
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                         </div>
                     </div>
                     <div className="tweet-message">
@@ -133,7 +133,7 @@ function Explores() {
                             </div>
                         </div>
                         <div className="tp-dots">
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                         </div>
                     </div>
                     <div className="tweet-message">
@@ -170,7 +170,7 @@ function Explores() {
                             </div>
                         </div>
                         <div className="tp-dots">
-                            <p>...</p>
+                            <p className='cursor-pointer'>...</p>
                         </div>
                     </div>
                 </main>

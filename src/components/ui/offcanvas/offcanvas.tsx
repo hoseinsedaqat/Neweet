@@ -132,9 +132,9 @@ function OffCanvas() {
                             </Link>
                         </li>
                         <li>
-                    <button type='button' className="tweet-btn bg-primary" data-bs-toggle="modal" data-bs-target="#tweetModal">
-                        Tweet
-                    </button>
+                            <button type='button' className="tweet-btn bg-primary" data-bs-toggle="modal" data-bs-target="#tweetModal">
+                                Post
+                            </button>
                         </li>
                         <li>
                     <p>
