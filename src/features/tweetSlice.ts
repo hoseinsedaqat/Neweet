@@ -1,10 +1,10 @@
 import ModernFamily from "@/assets/ModernFamily.jpg";
 
+import { createSlice } from "@reduxjs/toolkit";
+
 import ElonMusk from "@/assets/ElonMusk.webp";
 
 import Sijal from "@/assets/Sijal.jpg";
-
-import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   tweets: [
@@ -14,6 +14,11 @@ const initialState = {
       text: "I love Modern Family Show is Awesome 🤘😍",
       img: ModernFamily,
       buildby: "admin",
+      time: "14h",
+      comments: "115",
+      forward: "245",
+      likes: "324",
+      trend: "21k",
     },
     {
       name: "Hosein Sedaqat",
@@ -21,6 +26,11 @@ const initialState = {
       text: "I Am Nerdi Geek Why are you care ????? 😎 ",
       img: ElonMusk,
       buildby: "admin",
+      time: "19h",
+      comments: "214",
+      forward: "324",
+      likes: "756",
+      trend: "36k",
     },
     {
       name: "Hosein Sedaqat",
@@ -28,6 +38,11 @@ const initialState = {
       text: "Sijaliiiiiiiii 🤞🎤",
       img: Sijal,
       buildby: "admin",
+      time: "23h",
+      comments: "100",
+      forward: "114",
+      likes: "95",
+      trend: "3k",
     },
   ],
   tweet: "That is my First Tweet",
@@ -44,6 +59,11 @@ const tweetSlice = createSlice({
         text: payload.payload.tweetText,
         img: payload.payload.files,
         buildby: "user",
+        time: "now",
+        comments: "0",
+        forward: "0",
+        likes: "0",
+        trend: "0",
       });
     },
   },
