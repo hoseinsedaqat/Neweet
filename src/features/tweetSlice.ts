@@ -1,27 +1,32 @@
-import { createSlice } from "@reduxjs/toolkit";
 import ModernFamily from "@/assets/ModernFamily.jpg";
+
+import ElonMusk from "@/assets/ElonMusk.webp";
+
+import Sijal from "@/assets/Sijal.jpg";
+
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   tweets: [
     {
       name: "Hosein Sedaqat",
       username: "HoseinSedaqat",
-      text: "Nice dude",
+      text: "I love Modern Family Show is Awesome 🤘😍",
       img: ModernFamily,
       buildby: "admin",
     },
     {
       name: "Hosein Sedaqat",
       username: "HoseinSedaqat",
-      text: "Nice dude",
-      img: ModernFamily,
+      text: "I Am Nerdi Geek Why are you care ????? 😎 ",
+      img: ElonMusk,
       buildby: "admin",
     },
     {
       name: "Hosein Sedaqat",
       username: "HoseinSedaqat",
-      text: "Nice dude",
-      img: ModernFamily,
+      text: "Sijaliiiiiiiii 🤞🎤",
+      img: Sijal,
       buildby: "admin",
     },
   ],
@@ -33,8 +38,6 @@ const tweetSlice = createSlice({
   initialState,
   reducers: {
     addTweet(state, payload) {
-      console.log(payload.payload);
-
       state.tweets.unshift({
         name: "Hosein Sedaqat",
         username: "HoseinSedaqat",
