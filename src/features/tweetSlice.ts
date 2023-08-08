@@ -45,7 +45,6 @@ const initialState = {
       trend: "3k",
     },
   ],
-  tweet: "That is my First Tweet",
 };
 
 const tweetSlice = createSlice({

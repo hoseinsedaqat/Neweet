@@ -78,6 +78,28 @@
     position: relative;
 }
 
+#messages-direct-empty {
+    border: 1px solid #222;
+    margin: 0.5rem 0;
+    height: 96.2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: 0 5rem;
+    text-align: start;
+    font-size: 14px;
+}
+
+#messages-direct-empty button {
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+}
+
 #messages-direct .messages-direct-header {
     display: flex;
     align-items: center;
@@ -150,6 +172,10 @@
     }
 
     #messages-direct {
+        display: none;
+    }
+
+    #messages-direct-empty {
         display: none;
     }
 
