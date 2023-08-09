@@ -2,7 +2,11 @@
 
 import { useValidation } from "react-simple-form-validator";
 
+import { toast_features } from "@/constants/toastfeatures";
+
 import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
+
+import { ToastContainer, toast } from "react-toastify";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -26,7 +30,7 @@ function Tweets() {
   const { isFormValid } = useValidation({
     fieldsRules: {
       tweetText: { required: true },
-      files: { required: true },
+      files: { required: false },
     },
     state: { files, tweetText },
   });
@@ -43,7 +47,7 @@ function Tweets() {
       setTweetText("");
       setFiles("");
     } else {
-      alert("Form is not Valid");
+      toast.info("Please enter your toughts ✌😎", toast_features as any);
     }
   }
 
@@ -56,8 +60,7 @@ function Tweets() {
 
       reader.readAsDataURL(e.target.files[0]);
     } catch (e) {
-      console.log(e);
-      alert("Image Size is Large");
+      toast.error("Image Size is Large 💀", toast_features as any);
     }
   }
 
@@ -149,20 +152,27 @@ function Tweets() {
                     <small>{tweet.text}</small>
                   </div>
                   <div>
-                    {tweet.buildby === "admin" ? (
-                      <Image
-                        src={tweet.img}
-                        alt='User-Tweet-Img'
-                        className='my-2'
-                      />
+                    {/* if image is empty i don't want to show it */}
+                    {tweet.img == "" ? (
+                      ""
                     ) : (
-                      <picture>
-                        <img
-                          src={tweet.img}
-                          alt='User-Tweet-Img'
-                          className='my-2'
-                        />
-                      </picture>
+                      <>
+                        {tweet.buildby === "admin" ? (
+                          <Image
+                            src={tweet.img}
+                            alt='User-Tweet-Img'
+                            className='my-2'
+                          />
+                        ) : (
+                          <picture>
+                            <img
+                              src={tweet.img}
+                              alt='User-Tweet-Img'
+                              className='my-2'
+                            />
+                          </picture>
+                        )}
+                      </>
                     )}
                   </div>
                   <div className='d-flex tweet-post-sm'>
@@ -191,6 +201,7 @@ function Tweets() {
             </div>
           ))}
         </main>
+        <ToastContainer />
       </section>
     </>
   );
