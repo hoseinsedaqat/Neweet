@@ -4,30 +4,41 @@ import SidebarMd from "@/components/layout/sidebar/sidebarmd";
 
 import Sidebar from "@/components/layout/sidebar/sidebar";
 
-import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-import { useSelector } from "react-redux";
+import { addMessage, switchDirectShow } from "@/features/messageSlice";
+
+import { useEffect, useState } from "react";
 
 import Image from "next/image";
 
+import Link from "next/link";
+
 function Messages() {
   const messages = useSelector<any, any>((store) => store.message.messages);
+
+  const fillDirect = useSelector<any, any>((store) => store.message.fillDirect);
+
   const [directEmpty, setDirectEmpty] = useState(true);
-  const [fillDirect, setFillDirect] = useState({
-    name: "",
-    img: "",
-    username: "",
-    text: ``,
-    directs: [],
-  });
+
+  const dispatch = useDispatch();
+
+  const [addMsg, setAddMsg] = useState("");
+
   function switchDirect(name: string) {
+    dispatch(switchDirectShow({ name }));
     setDirectEmpty(false);
-    const findthename = messages.find((message: any) => message.name === name);
-    setFillDirect(findthename);
   }
+
+  function sendMessage() {
+    dispatch(addMessage({ message: addMsg, id: fillDirect.id }));
+    setAddMsg("");
+  }
+
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap");
   }, []);
+
   return (
     <>
       <div className='container'>
@@ -87,6 +98,37 @@ function Messages() {
                 </div>
               </div>
             ))}
+            {/* for small Size */}
+            {messages.map((user: any, idx: number) => (
+              <Link
+                href={`/messages/${user.id}`}
+                className='messages-user-sm'
+                onClick={() => switchDirect(user.name)}
+                key={idx}>
+                <div>
+                  <Image
+                    src={user.img}
+                    alt='User-Profile-Img'
+                  />
+                </div>
+                <div>
+                  <span>
+                    <small>{user.name}</small>
+                    <small className='text-muted mx-1'>
+                      @{user.username.substring(0, 5) + "..."}
+                    </small>
+                    <small className='text-muted'>
+                      Jul {Math.abs(idx + 1 - 9)}
+                    </small>
+                  </span>
+                  <span>
+                    <small className='text-muted'>
+                      {user.text.substring(0, 22) + "..."}
+                    </small>
+                  </span>
+                </div>
+              </Link>
+            ))}
           </section>
           {directEmpty ? (
             <section
@@ -116,24 +158,30 @@ function Messages() {
                 </div>
               </div>
               <div className='messages-direct-texts'>
-                {fillDirect.directs.map((msg: any, idx) => (
-                  <p
-                    className={
-                      msg.odd
-                        ? "bg-primary text-white"
-                        : "bg-secondary text-white"
-                    }
-                    key={idx}>
-                    {msg.odd ? msg.odd : msg.even}
-                  </p>
-                ))}
+                {fillDirect.directs && (
+                  <>
+                    {fillDirect.directs.map((msg: any, idx: number) => (
+                      <p
+                        className={
+                          msg.odd
+                            ? "bg-primary text-white trm"
+                            : "bg-secondary text-white tlm"
+                        }
+                        key={idx}>
+                        {msg.odd ? msg.odd : msg.even}
+                      </p>
+                    ))}
+                  </>
+                )}
               </div>
               <div className='messages-direct-add'>
                 <input
                   type='text'
                   placeholder='Start a new messgae'
+                  value={addMsg}
+                  onChange={(e) => setAddMsg(e.target.value)}
                 />
-                <div>
+                <div onClick={() => sendMessage()}>
                   <i className='bi bi-send-fill cursor-pointer'></i>
                 </div>
               </div>

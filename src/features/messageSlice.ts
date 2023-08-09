@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 import NazaninChekinpour from "@/assets/NazaninChekinpour.jpg";
 
@@ -19,6 +19,7 @@ import ManuRink from "@/assets/ManuRink.jpg";
 const initialState = {
   messages: [
     {
+      id: `30850a2a-8341-4188-9cd7-032b2e4d79ce`,
       name: "Neda",
       img: NedaDivbandi,
       username: "NedaDivbandi",
@@ -39,6 +40,7 @@ const initialState = {
       ],
     },
     {
+      id: `e70aeb6e-912b-4841-bbbc-f133a7ae0754`,
       name: "Amirhassan",
       img: AmirhassanAzimi,
       username: "AmirhassanAzimi",
@@ -59,6 +61,7 @@ const initialState = {
       ],
     },
     {
+      id: `61912e3d-7c06-49ce-aedf-48752075562c`,
       name: "Ali",
       img: AliNazari,
       username: "AliNazari",
@@ -79,6 +82,7 @@ const initialState = {
       ],
     },
     {
+      id: `dcc19519-e8ad-4a47-99b5-1f33b70bb2fc`,
       name: "Manu",
       img: ManuRink,
       username: "ManuRink",
@@ -99,6 +103,7 @@ const initialState = {
       ],
     },
     {
+      id: `a0e49aa5-e046-4210-ab0d-98226eda135e`,
       name: "Sayeh",
       img: SayehGhaderi,
       username: "SayehGhaderi",
@@ -119,6 +124,7 @@ const initialState = {
       ],
     },
     {
+      id: `79aa3c0a-71ac-4124-bc5a-1afb5195a765`,
       name: "Nazanin",
       img: NazaninChekinpour,
       username: "NazaninChekinpour",
@@ -139,6 +145,7 @@ const initialState = {
       ],
     },
     {
+      id: `6a537cdc-58b8-4841-a00f-4f5ab3b79df3`,
       name: "Colt",
       img: ColtSteele,
       username: "ColtSteele",
@@ -159,6 +166,7 @@ const initialState = {
       ],
     },
     {
+      id: `5316512a-ae44-49d9-b29d-18ff75ef02a3`,
       name: "Scott",
       img: ScottMoss,
       username: "ScottMoss",
@@ -179,12 +187,39 @@ const initialState = {
       ],
     },
   ],
+  fillDirect: {},
 };
 
 const messageSlice = createSlice({
   name: "messsage",
   initialState,
-  reducers: {},
+  reducers: {
+    addMessage(state, payload) {
+      state.messages.forEach((user) => {
+        if (user.id === payload.payload.id) {
+          user.directs.push({ even: payload.payload.message });
+          state.fillDirect = user;
+        }
+      });
+    },
+    switchDirectShow(state, payload) {
+      state.messages.forEach((user) => {
+        if (user.name == payload.payload.name) {
+          state.fillDirect = user;
+        }
+      });
+    },
+    stableFillDirect(state, payload) {
+      state.messages.forEach((user) => {
+        if (user.id == payload.payload.id) {
+          state.fillDirect = user;
+        }
+      });
+    },
+  },
 });
+
+export const { addMessage, switchDirectShow, stableFillDirect } =
+  messageSlice.actions;
 
 export default messageSlice.reducer;

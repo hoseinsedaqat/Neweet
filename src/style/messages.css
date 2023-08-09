@@ -47,29 +47,45 @@
     padding: 0.5rem;
 }
 
+#messages-preview .messages-user-sm {
+    display: none;
+    margin: 0.7rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
 
-#messages-preview .messages-user:hover {
+
+#messages-preview .messages-user:hover, #messages-preview .messages-user-sm:hover {
     background-color: #222;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#messages-preview .messages-user img {
+#messages-preview .messages-user img, #messages-preview .messages-user-sm img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-#messages-preview .messages-user div {
+#messages-preview .messages-user div, #messages-preview .messages-user-sm div {
     margin: 0 0.2rem;
 }
 
-#messages-preview .messages-user div:nth-child(2) {
+#messages-preview .messages-user div:nth-child(2), #messages-preview .messages-user-sm div:nth-child(2) {
     display: flex;
     flex-direction: column;
 }
 
 #messages-direct {
+    border: 1px solid #222;
+    margin: 0.5rem 0;
+    height: 96.2vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#messages-direct-sm {
     border: 1px solid #222;
     margin: 0.5rem 0;
     height: 96.2vh;
@@ -100,33 +116,33 @@
     border-radius: 20px;
 }
 
-#messages-direct .messages-direct-header {
+#messages-direct .messages-direct-header, #messages-direct-sm .messages-direct-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
 }
 
-#messages-direct .messages-direct-header img {
+#messages-direct .messages-direct-header img, #messages-direct-sm .messages-direct-header img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin: 0 0.5rem 0 0;
 }
 
-#messages-direct .messages-direct-texts {
+#messages-direct .messages-direct-texts, #messages-direct-sm .messages-direct-texts {
     margin: 0 0 0 0.5rem;
     width: 100% !important;
 }
 
-#messages-direct .messages-direct-texts p:nth-child(odd) {
+#messages-direct .messages-direct-texts .trm, #messages-direct-sm .messages-direct-texts .trm {
     padding: 0.5rem;
     border-radius: 8px;
     width: 50%;
     font-size: 14px;
 }
 
-#messages-direct .messages-direct-texts p:nth-child(even) {
+#messages-direct .messages-direct-texts .tlm, #messages-direct-sm .messages-direct-texts .tlm {
     padding: 0.5rem;
     border-radius: 8px;
     width: 50%;
@@ -134,7 +150,7 @@
     margin: 1rem 0 1rem auto;
 }
 
-#messages-direct .messages-direct-add {
+#messages-direct .messages-direct-add, #messages-direct-sm .messages-direct-add {
     position: sticky;
     bottom: 0;
     display: flex;
@@ -145,18 +161,18 @@
     /* margin: 0.7rem; */
 }
 
-#messages-direct .messages-direct-add input {
+#messages-direct .messages-direct-add input, #messages-direct-sm .messages-direct-add input {
     width: 100%;
     border: none;
     padding: 0.5rem;
     background-color: #222;
 }
 
-#messages-direct .messages-direct-add input:focus {
+#messages-direct .messages-direct-add input:focus, #messages-direct-sm .messages-direct-add input:focus {
     outline: none;
 }
 
-#messages-direct .messages-direct-add div {
+#messages-direct .messages-direct-add div, #messages-direct-sm .messages-direct-add div {
     transform: rotate(44deg);
 }
 
@@ -177,6 +193,14 @@
 
     #messages-direct-empty {
         display: none;
+    }
+
+    #messages-preview .messages-user {
+        display: none;
+    }
+
+    #messages-preview .messages-user-sm {
+        display: flex;
     }
 
     #messages-preview {
