@@ -6,11 +6,16 @@ import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
 
 import Logo from "@/assets/TwitterLogo.jpeg";
 
+import { useSelector } from "react-redux";
+
 import Image from "next/image";
 
 import Link from "next/link";
 
 function Sidebar() {
+  const username = useSelector<any, any>((store) => store.profile.username);
+
+  const userid = useSelector<any, any>((store) => store.profile.userid);
   return (
     <>
       {/* Sidebar Column */}
@@ -128,8 +133,8 @@ function Sidebar() {
                 />
               </p>
               <p className='ms-3'>
-                <span className='d-block'>Hosein Sedaqat</span>
-                <span className='d-block'>@HoseinSedaqat</span>
+                <span className='d-block'>{username}</span>
+                <span className='d-block'>@{userid}</span>
               </p>
             </li>
           </ul>

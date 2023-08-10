@@ -105,20 +105,27 @@ function Explores() {
                     <small>{tweet.text}</small>
                   </div>
                   <div>
-                    {tweet.buildby === "admin" ? (
-                      <Image
-                        src={tweet.img}
-                        alt='User-Tweet-Img'
-                        className='my-2'
-                      />
+                    {/* if image is empty i don't want to show it */}
+                    {tweet.img == "" ? (
+                      ""
                     ) : (
-                      <picture>
-                        <img
-                          src={tweet.img}
-                          alt='User-Tweet-Img'
-                          className='my-2'
-                        />
-                      </picture>
+                      <>
+                        {tweet.buildby === "admin" ? (
+                          <Image
+                            src={tweet.img}
+                            alt='User-Tweet-Img'
+                            className='my-2'
+                          />
+                        ) : (
+                          <picture>
+                            <img
+                              src={tweet.img}
+                              alt='User-Tweet-Img'
+                              className='my-2'
+                            />
+                          </picture>
+                        )}
+                      </>
                     )}
                   </div>
                   <div className='d-flex tweet-post-sm'>

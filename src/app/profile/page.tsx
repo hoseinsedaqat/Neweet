@@ -19,6 +19,18 @@ import Image from "next/image";
 function Profile() {
   const tweets = useSelector<any, any>((store) => store.tweet.tweets);
 
+  const profile_image = useSelector<any, any>(
+    (store) => store.profile.profile_image
+  );
+
+  const new_profile_image = useSelector<any, any>(
+    (store) => store.profile.new_profile_image
+  );
+
+  const switch_image = useSelector<any, any>(
+    (store) => store.profile.switch_image
+  );
+
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap");
   }, []);
@@ -38,10 +50,22 @@ function Profile() {
               </div>
               <div className='profile-edit'>
                 <div>
-                  <Image
-                    src={HoseinSedaqat}
-                    alt='User-Profile-Img'
-                  />
+                  {/* User profile image */}
+                  {switch_image ? (
+                    <Image
+                      src={profile_image}
+                      alt='User-Profile-Img'
+                    />
+                  ) : (
+                    <picture>
+                      <img
+                        src={new_profile_image}
+                        alt='User-Profile-Img'
+                        width={20}
+                        height={20}
+                      />
+                    </picture>
+                  )}
                 </div>
                 <div>
                   <button
@@ -107,20 +131,27 @@ function Profile() {
                         <small>{tweet.text}</small>
                       </div>
                       <div>
-                        {tweet.buildby === "admin" ? (
-                          <Image
-                            src={tweet.img}
-                            alt='User-Tweet-Img'
-                            className='my-2'
-                          />
+                        {/* if image is empty i don't want to show it */}
+                        {tweet.img == "" ? (
+                          ""
                         ) : (
-                          <picture>
-                            <img
-                              src={tweet.img}
-                              alt='User-Tweet-Img'
-                              className='my-2'
-                            />
-                          </picture>
+                          <>
+                            {tweet.buildby === "admin" ? (
+                              <Image
+                                src={tweet.img}
+                                alt='User-Tweet-Img'
+                                className='my-2'
+                              />
+                            ) : (
+                              <picture>
+                                <img
+                                  src={tweet.img}
+                                  alt='User-Tweet-Img'
+                                  className='my-2'
+                                />
+                              </picture>
+                            )}
+                          </>
                         )}
                       </div>
                       <div className='d-flex tweet-post-sm'>
