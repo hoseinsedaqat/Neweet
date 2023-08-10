@@ -62,8 +62,8 @@ function ModalEditProfile({ id }: ComponentTypes) {
 
   function updateName_Id() {
     dispatch(updateUserNameWithId({ username: forName, userid: forId }));
-    setForName(username);
-    setForId(userid);
+    setForName("");
+    setForId("");
   }
 
   useEffect(() => {
@@ -71,11 +71,6 @@ function ModalEditProfile({ id }: ComponentTypes) {
   }, [dispatch]);
   return (
     <>
-      {/* Button trigger modal */}
-      {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tweetModal">
-            Launch demo modal
-        </button> */}
-      {/* Modal */}
       <div
         className='modal fade'
         id={id}

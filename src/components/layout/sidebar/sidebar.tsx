@@ -2,20 +2,39 @@
 
 import ModalComponent from "../../ui/modal/modalcomponent";
 
-import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
+import { useSelector, useDispatch } from "react-redux";
+
+import { prepareImage } from "@/features/profileSlice";
 
 import Logo from "@/assets/TwitterLogo.jpeg";
 
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 import Image from "next/image";
 
 import Link from "next/link";
 
 function Sidebar() {
+  const dispatch = useDispatch();
+
   const username = useSelector<any, any>((store) => store.profile.username);
 
   const userid = useSelector<any, any>((store) => store.profile.userid);
+
+  const profile_image = useSelector<any, any>(
+    (store) => store.profile.profile_image
+  );
+
+  const new_profile_image = useSelector<any, any>(
+    (store) => store.profile.new_profile_image
+  );
+
+  const switch_image = useSelector<any, any>(
+    (store) => store.profile.switch_image
+  );
+  useEffect(() => {
+    dispatch(prepareImage());
+  }, [dispatch]);
   return (
     <>
       {/* Sidebar Column */}
@@ -127,14 +146,35 @@ function Sidebar() {
             </li>
             <li>
               <p>
-                <Image
-                  src={HoseinSedaqat}
-                  alt='User-Profile-Img'
-                />
+                {/* User profile image */}
+                {switch_image ? (
+                  <Image
+                    src={profile_image}
+                    alt='User-Profile-Img'
+                  />
+                ) : (
+                  <picture>
+                    <img
+                      src={new_profile_image}
+                      alt='User-Profile-Img'
+                      width={20}
+                      height={20}
+                    />
+                  </picture>
+                )}
               </p>
               <p className='ms-3'>
-                <span className='d-block'>{username}</span>
-                <span className='d-block'>@{userid}</span>
+                <span className='d-block'>
+                  {username.length <= 15
+                    ? username
+                    : username.substring(0, 12) + "..."}
+                </span>
+                <span className='d-block'>
+                  @
+                  {userid.length <= 15
+                    ? userid
+                    : userid.substring(0, 10) + "..."}
+                </span>
               </p>
             </li>
           </ul>

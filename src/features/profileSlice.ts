@@ -22,8 +22,12 @@ const profileSlice = createSlice({
       state.new_profile_image = payload.payload;
     },
     updateUserNameWithId(state, payload) {
-      state.username = payload.payload.username;
-      state.userid = payload.payload.userid;
+      if (payload.payload.username !== "") {
+        state.username = payload.payload.username;
+      }
+      if (payload.payload.userid !== "") {
+        state.userid = payload.payload.userid;
+      }
     },
   },
 });
