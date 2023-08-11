@@ -1,7 +1,7 @@
 # First Look 🤞
 
 <div align="center">
-  <img width=100% height="100%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/71232870/259949984-6227cb45-02dc-46cb-9624-f18ff2f5a7ff.png" />
+  <img width=100% height="100%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/71232870/259951017-3a7962d8-d87d-45d9-a38a-e7a48e30f86a.png" />
 </div>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
