@@ -1,13 +1,39 @@
 import SidebarMd from "@/components/layout/sidebar/sidebarmd";
 
+import { prepareImage } from "@/features/profileSlice";
+
+import { useSelector, useDispatch } from "react-redux";
+
 import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
 
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 import Image from "next/image";
 
 function Explores() {
   const tweets = useSelector<any, any>((store) => store.tweet.tweets);
+
+  const dispatch = useDispatch();
+
+  const username = useSelector<any, any>((store) => store.profile.username);
+
+  const userid = useSelector<any, any>((store) => store.profile.userid);
+
+  const profile_image = useSelector<any, any>(
+    (store) => store.profile.profile_image
+  );
+
+  const new_profile_image = useSelector<any, any>(
+    (store) => store.profile.new_profile_image
+  );
+
+  const switch_image = useSelector<any, any>(
+    (store) => store.profile.switch_image
+  );
+
+  useEffect(() => {
+    dispatch(prepareImage());
+  }, [dispatch]);
 
   return (
     <>
@@ -89,14 +115,33 @@ function Explores() {
               className='tweet-message'
               key={idx}>
               <div className='tp'>
-                <Image
-                  src={HoseinSedaqat}
-                  alt='User-Profile-Img'
-                />
+                {/* User profile image */}
+                {switch_image ? (
+                  <Image
+                    src={profile_image}
+                    alt='User-Profile-Img'
+                  />
+                ) : (
+                  <picture>
+                    <img
+                      src={new_profile_image}
+                      alt='User-Profile-Img'
+                      width={20}
+                      height={20}
+                    />
+                  </picture>
+                )}
                 <div className='tp-data'>
-                  <small className='mx-2 tweet-post-title'>{tweet.name}</small>
+                  <small className='mx-2 tweet-post-title'>
+                    {username.length <= 15
+                      ? username
+                      : username.substring(0, 12) + "..."}
+                  </small>
                   <small className='text-muted tweet-post-title'>
-                    @{tweet.username}
+                    @
+                    {userid.length <= 15
+                      ? userid
+                      : userid.substring(0, 10) + "..."}
                   </small>
                   <small className='ms-1 text-muted tweet-post-title'>
                     .{tweet.time}

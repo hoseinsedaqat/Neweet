@@ -9,8 +9,6 @@ import Sijal from "@/assets/Sijal.jpg";
 const initialState = {
   tweets: [
     {
-      name: "Hosein Sedaqat",
-      username: "HoseinSedaqat",
       text: "I love Modern Family Show is Awesome 🤘😍",
       img: ModernFamily,
       buildby: "admin",
@@ -21,8 +19,6 @@ const initialState = {
       trend: "21k",
     },
     {
-      name: "Hosein Sedaqat",
-      username: "HoseinSedaqat",
       text: "I Am Nerdi Geek Why are you care ????? 😎 ",
       img: ElonMusk,
       buildby: "admin",
@@ -33,8 +29,6 @@ const initialState = {
       trend: "36k",
     },
     {
-      name: "Hosein Sedaqat",
-      username: "HoseinSedaqat",
       text: "Sijaliiiiiiiii 🤞🎤",
       img: Sijal,
       buildby: "admin",
@@ -53,8 +47,6 @@ const tweetSlice = createSlice({
   reducers: {
     addTweet(state, payload) {
       state.tweets.unshift({
-        name: "Hosein Sedaqat",
-        username: "HoseinSedaqat",
         text: payload.payload.tweetText,
         img: payload.payload.files,
         buildby: "user",
@@ -65,9 +57,12 @@ const tweetSlice = createSlice({
         trend: "0",
       });
     },
+    deleteTweet(state, payload) {
+      state.tweets.splice(payload.payload, 1);
+    },
   },
 });
 
-export const { addTweet } = tweetSlice.actions;
+export const { addTweet, deleteTweet } = tweetSlice.actions;
 
 export default tweetSlice.reducer;
