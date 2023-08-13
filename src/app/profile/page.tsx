@@ -4,6 +4,8 @@ import Information from "@/components/layout/information/information";
 
 import ModalEditProfile from "@/components/ui/modal/modaleditprofile";
 
+import { likeTweet, unLikeTweet } from "@/features/tweetSlice";
+
 import SidebarMd from "@/components/layout/sidebar/sidebarmd";
 
 import Sidebar from "@/components/layout/sidebar/sidebar";
@@ -57,7 +59,11 @@ function Profile() {
             <SidebarMd id='' />
             <main>
               <div className='profile-header'>
-                <h5>Hosein Sedaqat</h5>
+                <h5>
+                  {username.length <= 15
+                    ? username
+                    : username.substring(0, 12) + "..."}
+                </h5>
               </div>
               <div className='profile-edit'>
                 <div>
@@ -202,10 +208,25 @@ function Profile() {
                               <i className='bi bi-arrow-90deg-left'></i>
                               <small className='ms-2'>{tweet.forward}</small>
                             </p>
-                            <p className='text-muted mx-3'>
-                              <i className='bi bi-heart'></i>
-                              <small className='ms-2'>{tweet.likes}</small>
-                            </p>
+                            {!tweet.addLike ? (
+                              <>
+                                <p
+                                  className='text-muted mx-3 cursor-pointer'
+                                  onClick={() => dispatch(likeTweet(idx))}>
+                                  <i className='bi bi-heart'></i>
+                                  <small className='ms-2'>{tweet.likes}</small>
+                                </p>
+                              </>
+                            ) : (
+                              <>
+                                <p
+                                  className='text-muted mx-3 cursor-pointer'
+                                  onClick={() => dispatch(unLikeTweet(idx))}>
+                                  <i className='bi bi-heart-fill text-danger'></i>
+                                  <small className='ms-2'>{tweet.likes}</small>
+                                </p>
+                              </>
+                            )}
                             <p className='text-muted mx-3'>
                               <i className='bi bi-bar-chart'></i>
                               <small className='ms-2'>{tweet.trend}</small>
@@ -225,7 +246,7 @@ function Profile() {
                             className='cursor-pointer'
                             onClick={() => dispatch(deleteTweet(idx))}>
                             <i className='bi bi-trash3-fill text-danger mx-2'></i>
-                            <small>Delete</small>
+                            <small className='text-white'>Delete</small>
                           </li>
                         </ul>
                       </div>

@@ -15,8 +15,9 @@ const initialState = {
       time: "14h",
       comments: "115",
       forward: "245",
-      likes: "324",
+      likes: 324,
       trend: "21k",
+      addLike: false,
     },
     {
       text: "I Am Nerdi Geek Why are you care ????? 😎 ",
@@ -25,8 +26,9 @@ const initialState = {
       time: "19h",
       comments: "214",
       forward: "324",
-      likes: "756",
+      likes: 756,
       trend: "36k",
+      addLike: false,
     },
     {
       text: "Sijaliiiiiiiii 🤞🎤",
@@ -35,8 +37,9 @@ const initialState = {
       time: "23h",
       comments: "100",
       forward: "114",
-      likes: "95",
+      likes: 95,
       trend: "3k",
+      addLike: false,
     },
   ],
 };
@@ -53,16 +56,34 @@ const tweetSlice = createSlice({
         time: "now",
         comments: "0",
         forward: "0",
-        likes: "0",
+        likes: 0,
         trend: "0",
+        addLike: false,
       });
     },
     deleteTweet(state, payload) {
       state.tweets.splice(payload.payload, 1);
     },
+    likeTweet(state, payload) {
+      state.tweets.forEach((post, idx) => {
+        if (idx === payload.payload) {
+          post.likes = post.likes + 1;
+          post.addLike = true;
+        }
+      });
+    },
+    unLikeTweet(state, payload) {
+      state.tweets.forEach((post, idx) => {
+        if (idx === payload.payload) {
+          post.likes = post.likes - 1;
+          post.addLike = false;
+        }
+      });
+    },
   },
 });
 
-export const { addTweet, deleteTweet } = tweetSlice.actions;
+export const { addTweet, deleteTweet, likeTweet, unLikeTweet } =
+  tweetSlice.actions;
 
 export default tweetSlice.reducer;

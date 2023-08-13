@@ -4,19 +4,21 @@ import { useValidation } from "react-simple-form-validator";
 
 import { toast_features } from "@/constants/toastfeatures";
 
+import { prepareImage } from "@/features/profileSlice";
+
 import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
 
 import { ToastContainer, toast } from "react-toastify";
+
+import { useSelector, useDispatch } from "react-redux";
 
 import PropTypes, { InferProps } from "prop-types";
 
 import { addTweet } from "@/features/tweetSlice";
 
-import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
-
-import { useState } from "react";
 
 const ComponentPropTypes = {
   id: PropTypes.string.isRequired,
@@ -26,6 +28,18 @@ type ComponentTypes = InferProps<typeof ComponentPropTypes>;
 
 function ModalComponent({ id }: ComponentTypes) {
   const dispatch = useDispatch();
+
+  const profile_image = useSelector<any, any>(
+    (store) => store.profile.profile_image
+  );
+
+  const new_profile_image = useSelector<any, any>(
+    (store) => store.profile.new_profile_image
+  );
+
+  const switch_image = useSelector<any, any>(
+    (store) => store.profile.switch_image
+  );
 
   const [tweetText, setTweetText] = useState("");
 
@@ -67,6 +81,10 @@ function ModalComponent({ id }: ComponentTypes) {
       toast.error("Image Size is Large 💀", toast_features as any);
     }
   }
+
+  useEffect(() => {
+    dispatch(prepareImage());
+  }, [dispatch]);
   return (
     <>
       <div
@@ -85,10 +103,21 @@ function ModalComponent({ id }: ComponentTypes) {
               <div className='add-tweet'>
                 <div>
                   {/* User profile image */}
-                  <Image
-                    src={HoseinSedaqat}
-                    alt='User-Profile-Img'
-                  />
+                  {switch_image ? (
+                    <Image
+                      src={profile_image}
+                      alt='User-Profile-Img'
+                    />
+                  ) : (
+                    <picture>
+                      <img
+                        src={new_profile_image}
+                        alt='User-Profile-Img'
+                        width={20}
+                        height={20}
+                      />
+                    </picture>
+                  )}
                 </div>
                 <div className='w-100'>
                   {/* Tweet textarea */}

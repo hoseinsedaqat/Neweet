@@ -1,3 +1,5 @@
+import { likeTweet, unLikeTweet } from "@/features/tweetSlice";
+
 import SidebarMd from "@/components/layout/sidebar/sidebarmd";
 
 import { prepareImage } from "@/features/profileSlice";
@@ -182,10 +184,25 @@ function Explores() {
                       <i className='bi bi-arrow-90deg-left'></i>
                       <small className='ms-2'>{tweet.forward}</small>
                     </p>
-                    <p className='text-muted mx-3'>
-                      <i className='bi bi-heart'></i>
-                      <small className='ms-2'>{tweet.likes}</small>
-                    </p>
+                    {!tweet.addLike ? (
+                      <>
+                        <p
+                          className='text-muted mx-3 cursor-pointer'
+                          onClick={() => dispatch(likeTweet(idx))}>
+                          <i className='bi bi-heart'></i>
+                          <small className='ms-2'>{tweet.likes}</small>
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <p
+                          className='text-muted mx-3 cursor-pointer'
+                          onClick={() => dispatch(unLikeTweet(idx))}>
+                          <i className='bi bi-heart-fill text-danger'></i>
+                          <small className='ms-2'>{tweet.likes}</small>
+                        </p>
+                      </>
+                    )}
                     <p className='text-muted mx-3'>
                       <i className='bi bi-bar-chart'></i>
                       <small className='ms-2'>{tweet.trend}</small>
