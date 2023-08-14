@@ -23,7 +23,7 @@ function NotFound() {
             <SidebarMd id='' />
             <main>
               <p>
-                {`Hmm...this page doesn't exist. Try searchingfor something else.`}
+                {`Hmm...this page doesn't exist. Try searching for something else.`}
               </p>
               <Link
                 href={"/"}
