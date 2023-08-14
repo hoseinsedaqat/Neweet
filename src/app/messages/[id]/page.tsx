@@ -19,8 +19,6 @@ function MessagePrivate() {
 
   const dispatch = useDispatch();
 
-  //   const messages = useSelector<any, any>((store) => store.message.messages);
-
   const fillDirect = useSelector<any, any>((store) => store.message.fillDirect);
 
   const [loading, setLoading] = useState(false);

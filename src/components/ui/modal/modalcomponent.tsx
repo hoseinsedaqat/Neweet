@@ -6,8 +6,6 @@ import { toast_features } from "@/constants/toastfeatures";
 
 import { prepareImage } from "@/features/profileSlice";
 
-import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
-
 import { ToastContainer, toast } from "react-toastify";
 
 import { useSelector, useDispatch } from "react-redux";

@@ -10,8 +10,6 @@ import SidebarMd from "@/components/layout/sidebar/sidebarmd";
 
 import Sidebar from "@/components/layout/sidebar/sidebar";
 
-import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
-
 import { prepareImage } from "@/features/profileSlice";
 
 import { useSelector, useDispatch } from "react-redux";

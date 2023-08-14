@@ -6,8 +6,6 @@ import { prepareImage } from "@/features/profileSlice";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
-
 import { useEffect } from "react";
 
 import Image from "next/image";

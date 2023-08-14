@@ -6,8 +6,6 @@ import {
   updateUserNameWithId,
 } from "@/features/profileSlice";
 
-// import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
-
 import { useSelector, useDispatch } from "react-redux";
 
 import PropTypes, { InferProps } from "prop-types";

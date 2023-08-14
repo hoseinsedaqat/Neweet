@@ -1,7 +1,5 @@
 "use client";
 
-import HoseinSedaqat from "@/assets/HoseinSedaqat.jpg";
-
 import { useSelector, useDispatch } from "react-redux";
 
 import { prepareImage } from "@/features/profileSlice";

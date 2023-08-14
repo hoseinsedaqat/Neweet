@@ -1,12 +1,12 @@
 "use client";
 
+import { addMessage, switchDirectShow } from "@/features/messageSlice";
+
 import SidebarMd from "@/components/layout/sidebar/sidebarmd";
 
 import Sidebar from "@/components/layout/sidebar/sidebar";
 
 import { useSelector, useDispatch } from "react-redux";
-
-import { addMessage, switchDirectShow } from "@/features/messageSlice";
 
 import { useEffect, useState } from "react";
 
