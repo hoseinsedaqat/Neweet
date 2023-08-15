@@ -2,7 +2,9 @@ import OffCanvas from "@/components/ui/offcanvas/offcanvas";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 import { Providers } from "@/redux/providers";
 
@@ -34,6 +36,7 @@ export default function RootLayout({
         <Providers>
           <OffCanvas />
           {children}
+          <ToastContainer />
         </Providers>
       </body>
     </html>
