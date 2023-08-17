@@ -26,7 +26,7 @@ const profileSlice = createSlice({
         state.username = payload.payload.username;
       }
       if (payload.payload.userid !== "") {
-        state.userid = payload.payload.userid;
+        state.userid = payload.payload.userid.split(" ").join("");
       }
     },
   },

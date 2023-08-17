@@ -59,13 +59,6 @@ function OffCanvas() {
             />
           </picture>
         )}
-        {/* <Image
-          src={profile_image}
-          alt='User-profile-img'
-          data-bs-toggle='offcanvas'
-          data-bs-target='#offcanvasExample'
-          aria-controls='offcanvasExample'
-        /> */}
         <div>
           <Link href={"/"}>
             <Image

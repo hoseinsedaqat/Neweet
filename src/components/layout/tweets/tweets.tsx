@@ -8,8 +8,6 @@ import { toast_features } from "@/constants/toastfeatures";
 
 import { prepareImage } from "@/features/profileSlice";
 
-import { ToastContainer, toast } from "react-toastify";
-
 import { useSelector, useDispatch } from "react-redux";
 
 import { deleteTweet } from "@/features/tweetSlice";
@@ -19,6 +17,8 @@ import { addTweet } from "@/features/tweetSlice";
 import SidebarMd from "../sidebar/sidebarmd";
 
 import { useState, useEffect } from "react";
+
+import { toast } from "react-toastify";
 
 import Image from "next/image";
 
@@ -296,7 +296,6 @@ function Tweets() {
             </>
           )}
         </main>
-        {/* <ToastContainer /> */}
       </section>
     </>
   );

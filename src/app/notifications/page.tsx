@@ -1,4 +1,5 @@
 "use client";
+
 import NotifyLanding from "@/components/notifications/landing/notifylanding";
 
 import Information from "@/components/layout/information/information";

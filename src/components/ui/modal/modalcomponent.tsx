@@ -6,8 +6,6 @@ import { toast_features } from "@/constants/toastfeatures";
 
 import { prepareImage } from "@/features/profileSlice";
 
-import { ToastContainer, toast } from "react-toastify";
-
 import { useSelector, useDispatch } from "react-redux";
 
 import PropTypes, { InferProps } from "prop-types";
@@ -15,6 +13,8 @@ import PropTypes, { InferProps } from "prop-types";
 import { addTweet } from "@/features/tweetSlice";
 
 import { useState, useEffect } from "react";
+
+import { toast } from "react-toastify";
 
 import Image from "next/image";
 
@@ -179,7 +179,6 @@ function ModalComponent({ id }: ComponentTypes) {
               </div>
             </div>
           </div>
-          {/* <ToastContainer /> */}
         </div>
       </div>
     </>

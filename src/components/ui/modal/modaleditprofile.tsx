@@ -6,11 +6,15 @@ import {
   updateUserNameWithId,
 } from "@/features/profileSlice";
 
+import { toast_features } from "@/constants/toastfeatures";
+
 import { useSelector, useDispatch } from "react-redux";
 
 import PropTypes, { InferProps } from "prop-types";
 
 import { useEffect, useState } from "react";
+
+import { toast } from "react-toastify";
 
 import Image from "next/image";
 
@@ -53,8 +57,8 @@ function ModalEditProfile({ id }: ComponentTypes) {
 
       reader.readAsDataURL(e.target.files[0]);
     } catch (e) {
-      console.log(e);
-      //   toast.error("Image Size is Large 💀", toast_features as any);
+      // console.log(e);
+      toast.error("Image Size is Large 💀", toast_features as any);
     }
   }
 
